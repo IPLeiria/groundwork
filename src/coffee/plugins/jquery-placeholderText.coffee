@@ -94,7 +94,8 @@
 
 ) jQuery
 
-$ ->
+(($) ->
+    $ ->
 
-  $('.placeholderText').placeholderText()
-
+      $('.placeholderText').placeholderText()
+)(jQuery.noConflict())

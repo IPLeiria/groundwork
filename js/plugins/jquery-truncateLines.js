@@ -128,8 +128,10 @@
     };
   })(jQuery);
 
-  $(window).load(function() {
-    return $("[data-truncate]").truncateLines();
-  });
+  (function($) {
+    return $(window).load(function() {
+      return $("[data-truncate]").truncateLines();
+    });
+  })(jQuery.noConflict());
 
 }).call(this);

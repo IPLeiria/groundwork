@@ -80,5 +80,7 @@ class ResponsiveText
 
 ) jQuery
 
-$(document).ready ->
-  $(".responsive").not('table').responsiveText()
+(($) ->
+    $(document).ready ->
+      $(".responsive").not('table').responsiveText()
+)(jQuery.noConflict())

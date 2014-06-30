@@ -104,8 +104,10 @@
     };
   })(jQuery);
 
-  $(document).ready(function() {
-    return $("table.responsive").responsiveTables();
-  });
+  (function($) {
+    return $(document).ready(function() {
+      return $("table.responsive").responsiveTables();
+    });
+  })(jQuery.noConflict());
 
 }).call(this);

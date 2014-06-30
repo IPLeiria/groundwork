@@ -113,8 +113,10 @@
     };
   })(jQuery);
 
-  $(function() {
-    return $('.placeholderText').placeholderText();
-  });
+  (function($) {
+    return $(function() {
+      return $('.placeholderText').placeholderText();
+    });
+  })(jQuery.noConflict());
 
 }).call(this);
