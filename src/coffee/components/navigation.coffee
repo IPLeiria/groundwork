@@ -57,9 +57,12 @@
 
         $('body').on 'mouseleave', '.nav:not(.vertical) li[role="menu"]', (e) ->
           unless $(@).parents('.nav').find('button.hamburger').is(':visible')
+            ### C3: disable animation
             window.delayMenuClose = setTimeout( =>
               $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
             , 500)
+            ###
+            $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
 
       touchBindings = ->
         $('body').on 'click', '.nav li[role="menu"] > a,

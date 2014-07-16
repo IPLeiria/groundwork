@@ -80,11 +80,14 @@
           }
         });
         return $('body').on('mouseleave', '.nav:not(.vertical) li[role="menu"]', function(e) {
-          var _this = this;
           if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
-            return window.delayMenuClose = setTimeout(function() {
-              return $(_this).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
-            }, 500);
+            /*
+            window.delayMenuClose = setTimeout( =>
+              $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
+            , 500)
+            */
+
+            return $(this).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false');
           }
         });
       };
