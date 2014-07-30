@@ -81,7 +81,7 @@
         });
         return $('body').on('mouseleave', '.nav:not(.vertical) li[role="menu"]', function(e) {
           if (!$(this).parents('.nav').find('button.hamburger').is(':visible')) {
-            /*
+            /* C3: disable animation
             window.delayMenuClose = setTimeout( =>
               $(@).find('ul[aria-expanded="true"]').attr('aria-expanded', 'false')
             , 500)
