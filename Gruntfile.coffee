@@ -39,6 +39,13 @@ module.exports = (grunt) ->
         files:
           'css/groundwork.css': ['css/groundwork.css']
 
+    csso:
+      build:
+        options:
+          report: ['min']
+        files:
+          'css/groundwork.css': ['css/groundwork.css']
+
     coffee:
       individual:
         expand: true
@@ -73,7 +80,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-csso'
 
   grunt.registerTask 'default',           ['build']
-  grunt.registerTask 'build',             ['compass', 'autoprefixer', 'coffee:individual', 'coffee:concatenated', 'cssmin', 'uglify']
+  grunt.registerTask 'build',             ['compass', 'autoprefixer', 'csso', 'coffee:individual', 'coffee:concatenated', 'cssmin', 'uglify']
   grunt.registerTask 'docs',              ['jade']
