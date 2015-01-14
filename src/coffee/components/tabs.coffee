@@ -10,7 +10,7 @@
           $(@).children('ul').children('li').first().addClass('active')
           $(@).children('div').first().addClass('active')
 
-      $('body').on 'click', '.tabs > ul li', (e) ->
+      $('body').on 'click', '.tabs > ul > li', (e) ->
         tab = $(@).addClass('active')
         tabs = tab.parents('.tabs')
         tab.siblings('li').removeClass('active')

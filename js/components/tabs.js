@@ -13,7 +13,7 @@
           return $(this).children('div').first().addClass('active');
         }
       });
-      $('body').on('click', '.tabs > ul li', function(e) {
+      $('body').on('click', '.tabs > ul > li', function(e) {
         var tab, tabs;
         tab = $(this).addClass('active');
         tabs = tab.parents('.tabs');
